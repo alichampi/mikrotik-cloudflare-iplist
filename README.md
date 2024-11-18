@@ -28,7 +28,7 @@ Adjust for `cloudflare-ips-v4.rsc` and/or `cloudflare-ips-v6.rsc` depending on w
 
 - Manually create the download script
 `:log info "Download Cloudflare IP list";
-/tool fetch url="https://raw.githubusercontent.com/Davie3/mikrotik-cloudflare-iplist/main/cloudflare-ips-v4.rsc" mode=https dst-path=cloudflare-ips-v4.rsc;`
+/tool fetch url="https://raw.githubusercontent.com/alichampi/mikrotik-cloudflare-iplist/main/cloudflare-ips-v4.rsc" mode=https dst-path=cloudflare-ips-v4.rsc;`
 - Manually create the replace script
 `:log info "Remove current Cloudflare IPs";
 /ip firewall address-list remove [find where list="cloudflare-ips"];

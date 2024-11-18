@@ -1,8 +1,8 @@
-# More details at https://github.com/Davie3/mikrotik-cloudflare-iplist
+# More details at https://github.com/alichampi/mikrotik-cloudflare-iplist
 # Script to download the Cloudflare list
 /system script add name="d3-cloudflare-download" source={
 :log info "Download Cloudflare IP list";
-/tool fetch url="https://raw.githubusercontent.com/Davie3/mikrotik-cloudflare-iplist/main/cloudflare-ips-v4.rsc" mode=https dst-path=cloudflare-ips-v4.rsc;
+/tool fetch url="https://raw.githubusercontent.com/alichampi/mikrotik-cloudflare-iplist/main/cloudflare-ips-v4.rsc" mode=https dst-path=cloudflare-ips-v4.rsc;
 }
 
 # Script to replace the Cloudflare list
@@ -15,5 +15,5 @@
 
 # Initialize the scheduler with the scripts
 /system scheduler
-add interval=1d name="d3-cf-dl" start-date=Jan/01/2000 start-time=00:05:00 on-event=d3-cloudflare-download
-add interval=1d name="d3-cf-rp" start-date=Jan/01/2000 start-time=00:10:00 on-event=d3-cloudflare-replace
+add interval=1d name="d3-cf-dl" start-date=Jan/01/2024 start-time=02:05:00 on-event=d3-cloudflare-download
+add interval=1d name="d3-cf-rp" start-date=Jan/01/2024 start-time=02:15:00 on-event=d3-cloudflare-replace
