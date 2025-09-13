@@ -5,11 +5,11 @@ updates:
     schedule:
       interval: "weekly"
       day: "saturday"
-      time: "07:00"
-      timezone: "America/Los_Angeles"
+      time: "04:00"
+      timezone: "Europe/Madrid"
     assignees:
-      - "davie3"
+      - "alichampi"
     reviewers:
-      - "davie3"
+      - "alichampi"
     labels:
       - "actions"
